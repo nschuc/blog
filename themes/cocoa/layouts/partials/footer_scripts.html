@@ -11,3 +11,8 @@
     hljs.initHighlightingOnLoad();
   </script>
 {{ end }}
+
+<!-- bottom of page -->
+{{ if .GetParam "hasMath"}}
+  <script>renderMathInElement(document.body);</script>
+{{ end }}
