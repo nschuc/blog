@@ -54,7 +54,6 @@ body {
   -ms-justify-content: flex-start;
   justify-content: flex-start;
   width: 100%;
-  min-height: 100%;
   font-weight: 400;
   font-family: 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
   color: #111;
@@ -172,6 +171,7 @@ section.header .content {
   -moz-align-items: center;
   -ms-align-items: center;
   align-items: center;
+  width: auto;
 }
 
 /* Glow */
@@ -190,7 +190,7 @@ section.header .name {
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   color: #333;
-  text-transform: uppercase;
+  text-transform: none;
   color: #555;
 }
 section.header h3.self-intro {
@@ -210,7 +210,7 @@ section.header nav {
   font-size: 14px;
   margin-left: 15px;
   margin-bottom: 16px;
-  text-transform: uppercase;
+  text-transform: none;
   font-family: 'Lato', 'Helvetica Neue', 'Arial', sans-serif;
 }
 section.header nav ul {
@@ -386,7 +386,6 @@ section.main .content .page-heading {
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   color: #333;
-  text-transform: uppercase;
   margin-bottom: 16px;
 }
 section.main .content .front-matter .page-heading {
@@ -644,7 +643,7 @@ section.main .content .markdown p {
   /* Invoked by line break */
   margin-top: 0;
   margin-bottom: 1em;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Cormorant', serif;
   font-weight: 400;
   font-size: 1.2em;
 }
