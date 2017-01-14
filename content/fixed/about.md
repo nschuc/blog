@@ -1,7 +1,8 @@
 +++
 date = "2017-01-11T16:51:35-05:00"
 title = "about"
-draft = false
+heading = "About Nathan"
+draft = true
 
 +++
 

@@ -4,6 +4,8 @@ title = "alternating reader"
 description = "Alternating Attentive Reader"
 draft = true
 hasMath = true
+hasd3 = true
+js = [ "alternating" ]
 
 +++
 
@@ -11,6 +13,17 @@ hasMath = true
 
 This a blog post about machine reading models. I have implemented a modern deep neural attentive reader architecture in TensorFlow and this is a run-down of that project.
 
-We'll probably need to do some math. Let's see if it works {{< tex "\sum_{n=1}^{\infty} 2^{-n} = 1" >}}. This should be inline.
-
-{{< tex display="\int \frac{1}{x} dx = \ln |x|" >}}
+## D3
+<div class="story" id="story-0">
+<div>
+<select></select>
+<label class="glimpse">Glimpse</label>
+<input type="range" min="1" max="8" value="1" step="1" />
+<label>Answer: <span class="answer"></span></label>
+<label>Predicted: <span class="predicted"></span></label>
+</div>
+<label>Document: </label>
+<div class="document"></div>
+<label>Query: </label>
+<div class="query"></div>
+</div>

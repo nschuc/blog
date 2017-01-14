@@ -16,3 +16,7 @@
 {{ if .GetParam "hasMath"}}
   <script>renderMathInElement(document.body);</script>
 {{ end }}
+
+{{- range .Params.js }}
+  <script src="/js/{{ . }}.js"></script>
+{{- end }}
