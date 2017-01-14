@@ -47,7 +47,6 @@ function loadStory(story_id) { // For each story instance in article
         }
         words[data.doc[i]] += parseFloat(data.doc_attentions[glimpseNum - 1][i]);
       }
-      console.log(words);
 
       var predicted = Object.keys(words).reduce(function(a, b) { return words[a] > words[b] ? a : b })
       story.select('.predicted')
@@ -71,23 +70,29 @@ function loadStory(story_id) { // For each story instance in article
 
       query.exit().remove();
 
+      /*
       var docColorScale = d3.scaleLinear()
         .domain([0, d3.max(data.doc_attentions[glimpseNum-1], function(d) { return d; })])
         //.domain([0, 0.5])
         .range([0, 1]);
+        */
 
+      var docColorScale = d3.scaleSequential(d3.interpolateGreens)
+        .domain([0, d3.max(data.doc_attentions[glimpseNum-1], function(d) { return d; })]);
+      var queryColorScale = d3.scaleSequential(d3.interpolateOranges)
+        .domain([0, d3.max(data.query_attentions[glimpseNum-1], function(d) { return d; })]);
       // Insert
       doc.enter()
         .append('span')
         .text(function(d) { return d[0] + " "; })
-        .style("color", function(d) { return d3.interpolatePlasma(docColorScale(d[1])); })
-        .style("background-color", function(d) { return d3.interpolatePlasma(1 - docColorScale(d[1])); })
+        .style("background-color", function(d) { return docColorScale(d[1]); })
+        .style("color", function(d) { return d3.hsl(docColorScale(d[1])).l > .5 ? 'black': 'white'; })
 
         query.enter()
         .append('span')
         .text(function(d) { return d[0] + " "; })
-        .style("color", function(d) { return d3.interpolatePlasma(docColorScale(d[1])); })
-        .style("background-color", function(d) { return d3.interpolatePlasma(1 - docColorScale(d[1])); })
+        .style("background-color", function(d) { return queryColorScale(d[1]); })
+        .style("color", function(d) { return d3.hsl(queryColorScale(d[1])).l > .5 ? 'black': 'white'; })
     }
   });
 }

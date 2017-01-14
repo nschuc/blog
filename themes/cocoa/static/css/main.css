@@ -4,9 +4,6 @@
 .light {
   color: #666 !important;
 }
-.accent {
-  color: #428bca !important;
-}
 @media (min-width: 550px) {
   .small-screens-only {
     display: none;
@@ -204,7 +201,6 @@ section.header h3.self-intro {
   color: #333;
   font-weight: 400;
   color: #555;
-  margin-bottom: 1rem;
 }
 section.header nav {
   font-size: 14px;
