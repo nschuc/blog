@@ -29,7 +29,7 @@ highlightjs  = true
 lang         = "en"
 linkedin     = "//www.linkedin.com/in/nathan-schucher-89905460"
 twitter      = "//twitter.com/nschucher"
-selfIntro    = "look at this guy, drinking his coffee; who does he think he is"
+selfIntro    = "look at this guy, drinking his coffee, don't you want to hire him?"
 
 # gravatar             = ""                # do not use in the same time as avatar
 avatar                 = "img/profile.jpg" # path to image in static dir e.g img/avatar.png (do not use in the same time as gravatar)
