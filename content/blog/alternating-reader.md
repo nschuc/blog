@@ -78,7 +78,9 @@ You can see as the training proceeds (from back to front), the likelihood distri
 
 ![Likelihood of Answer vs. Time](/img/answer_probability.png)
 
-My implementation acheived 65% accuracy on the Children's Book Test (Named Entity) test set, compared to the paper's 68.6%. This was after ~8 epochs, after which the validation loss started to increase. There are a few things missing from my implementation, including proper orthogonal initialization of the GRU weights.
+My implementation acheived 65% accuracy on the Children's Book Test (Named Entity) test set, compared to the paper's 68.6%. 
+This was after ~8 epochs, after which the validation loss started to increase. 
+There are a few things missing from my implementation, including proper orthogonal initialization of the GRU weights, [but undoubtedly much more](http://blog.dennybritz.com/2017/01/17/engineering-is-the-bottleneck-in-deep-learning-research/).
 
 ## What's next
 
