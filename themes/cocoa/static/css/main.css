@@ -639,7 +639,7 @@ section.main .content .markdown p {
   /* Invoked by line break */
   margin-top: 0;
   margin-bottom: 1em;
-  font-family: 'Cormorant', serif;
+  font-family: 'Georgia', serif;
   font-weight: 400;
   font-size: 1.2em;
 }
